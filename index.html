@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgendaLocal | Recordatorios</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">AL</div>
+        <div>
+          <h1>AgendaLocal</h1>
+          <span>Recordatorios</span>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a class="nav-link active" href="#inicio">Inicio</a>
+        <a class="nav-link" href="#calendario">Calendario</a>
+        <a class="nav-link" href="#notas">Notas</a>
+      </nav>
+
+      <div class="sidebar-card">
+        <strong>Modo local</strong>
+        <p>Esta versión está preparada para funcionar sin depender de servicios externos.</p>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Panel principal</p>
+          <h2>Organiza tu día</h2>
+          <p class="subtitle">Visualiza tus recordatorios, calendario y notas en un solo lugar.</p>
+        </div>
+        <div class="topbar-date">
+          <span>Estado</span>
+          <strong>Servidor local</strong>
+        </div>
+      </header>
+
+      <section id="inicio" class="stats-grid">
+        <article class="stat-card">
+          <span class="stat-label">Hoy</span>
+          <strong>3</strong>
+          <span class="stat-meta">recordatorios</span>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Esta semana</span>
+          <strong>8</strong>
+          <span class="stat-meta">pendientes</span>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Notas</span>
+          <strong>5</strong>
+          <span class="stat-meta">guardadas</span>
+        </article>
+      </section>
+
+      <section id="calendario" class="section-grid">
+        <article class="panel calendar-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Agenda</p>
+              <h3>Septiembre 2026</h3>
+            </div>
+            <div class="calendar-actions">
+              <button class="icon-btn" type="button" id="prevMonth" aria-label="Mes anterior">‹</button>
+              <button class="icon-btn" type="button" id="nextMonth" aria-label="Mes siguiente">›</button>
+            </div>
+          </div>
+
+          <div class="calendar" id="calendar">
+            <div class="weekday">Lun</div>
+            <div class="weekday">Mar</div>
+            <div class="weekday">Mié</div>
+            <div class="weekday">Jue</div>
+            <div class="weekday">Vie</div>
+            <div class="weekday">Sáb</div>
+            <div class="weekday">Dom</div>
+
+            <button class="day muted" type="button">31</button>
+            <button class="day" type="button">1</button>
+            <button class="day" type="button">2</button>
+            <button class="day marked" type="button">3<span></span></button>
+            <button class="day" type="button">4</button>
+            <button class="day weekend" type="button">5</button>
+            <button class="day weekend" type="button">6</button>
+            <button class="day" type="button">7</button>
+            <button class="day" type="button">8</button>
+            <button class="day marked" type="button">9<span></span></button>
+            <button class="day" type="button">10</button>
+            <button class="day" type="button">11</button>
+            <button class="day weekend" type="button">12</button>
+            <button class="day weekend" type="button">13</button>
+            <button class="day today" type="button">14</button>
+            <button class="day" type="button">15</button>
+            <button class="day marked" type="button">16<span></span></button>
+            <button class="day" type="button">17</button>
+            <button class="day" type="button">18</button>
+            <button class="day weekend" type="button">19</button>
+            <button class="day weekend" type="button">20</button>
+            <button class="day" type="button">21</button>
+            <button class="day" type="button">22</button>
+            <button class="day" type="button">23</button>
+            <button class="day" type="button">24</button>
+            <button class="day" type="button">25</button>
+            <button class="day weekend" type="button">26</button>
+            <button class="day weekend" type="button">27</button>
+            <button class="day" type="button">28</button>
+            <button class="day" type="button">29</button>
+            <button class="day" type="button">30</button>
+            <button class="day muted" type="button">1</button>
+            <button class="day muted" type="button">2</button>
+            <button class="day muted" type="button">3</button>
+            <button class="day muted" type="button">4</button>
+          </div>
+        </article>
+
+        <article class="panel reminders-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Próximos</p>
+              <h3>Recordatorios</h3>
+            </div>
+            <button class="primary-btn" type="button" id="addReminder">+ Agregar</button>
+          </div>
+
+          <div class="reminder-list">
+            <div class="reminder-item">
+              <div class="reminder-dot"></div>
+              <div>
+                <strong>Revisar proyecto</strong>
+                <span>09:00 · Hoy</span>
+              </div>
+            </div>
+            <div class="reminder-item">
+              <div class="reminder-dot"></div>
+              <div>
+                <strong>Entregar documentación</strong>
+                <span>14:30 · Hoy</span>
+              </div>
+            </div>
+            <div class="reminder-item">
+              <div class="reminder-dot"></div>
+              <div>
+                <strong>Reunión de equipo</strong>
+                <span>18:00 · Mañana</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="notas" class="notes-section">
+        <article class="panel notes-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Apuntes</p>
+              <h3>Notas rápidas</h3>
+            </div>
+            <button class="secondary-btn" type="button" id="addNote">+ Nueva nota</button>
+          </div>
+
+          <div class="notes-grid">
+            <div class="note-card">
+              <span class="note-date">14 SEP 2026</span>
+              <h4>Revisar presentación</h4>
+              <p>Comprobar evidencias, capturas y explicación del sitio antes de la demostración.</p>
+            </div>
+            <div class="note-card">
+              <span class="note-date">14 SEP 2026</span>
+              <h4>Lista de pendientes</h4>
+              <p>Terminar estilos, probar enlaces y preparar la copia externa del código.</p>
+            </div>
+            <div class="note-card">
+              <span class="note-date">13 SEP 2026</span>
+              <h4>Idea para el proyecto</h4>
+              <p>Agregar prioridades, etiquetas y filtros cuando se implemente la ruta dinámica.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <footer class="footer">
+        AgendaLocal · Prototipo estático · Diseñado para demostración local
+      </footer>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
